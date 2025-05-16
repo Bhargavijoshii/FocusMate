@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "FocusMate",
+  "version": "1.1",
+  "description": "Block distracting sites and stay focused!",
+  "permissions": ["storage", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

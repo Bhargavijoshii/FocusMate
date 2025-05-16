@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>FocusMate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 230px;
+    }
+    input, button, select {
+      width: 100%;
+      margin-top: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+    #timer {
+      margin-top: 20px;
+      text-align: center;
+    }
+    #timer h3 {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Block a Website</h3>
+  <input type="text" id="siteInput" placeholder="e.g. instagram.com" />
+  <button id="addBtn">Add</button>
+  <input type="number" id="unblockMinutes" min="1" max="120" value="5" style="width: 60px;"> minutes
+  <button id="tempUnblockBtn">Temporarily Unblock</button>
+  <ul id="blockedList"></ul>
+
+  <div id="timer">
+    <h3>Focus Timer</h3>
+    <div id="timeDisplay">25:00</div>
+    <button id="startTimerBtn">Start</button>
+    <button id="resetTimerBtn">Reset</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
